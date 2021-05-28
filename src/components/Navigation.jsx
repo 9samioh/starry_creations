@@ -1,46 +1,36 @@
-import React from "react";
+import React from 'react';
+// import { Text, View } from 'react-native';
 import { Link, withRouter } from "react-router-dom";
-// import { View, Image, StyleSheet } from 'react-native';
+import styles from '../styles/Navigation.module.css';
 
 function Navigation(props) {
   return (
-    <div className="navigation">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="container">
-          
+    <div className={styles.navigation}>
+      <nav class={styles.navbar}>
+        <div class={styles.navLeft}>
+          <img
+            class={styles.logo}
+            src="/images/logo.png"
+            alt=""
+          />
+        </div>
+        <div class={styles.navRight}>
+          <Link class={styles.item} to="/">
+            HOME
+          </Link>
 
-          <div>
-            <ul class="navbar-nav ml-auto">
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/">
-                  Home
-                  <span class="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/contact" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <Link class={styles.item} to="/">
+            LOOKBOOK
+          </Link>
+
+          <Link class={styles.item} to="/about">
+            ABOUT US 
+          </Link>
+
+          <Link class={styles.item} to="/contact">
+            CONTACT
+          </Link>
+
         </div>
       </nav>
     </div>

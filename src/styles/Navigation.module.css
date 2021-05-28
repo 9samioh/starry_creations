@@ -1,0 +1,50 @@
+/* fonts */
+@font-face {
+	src: url(../fonts/Abel/Abel-Regular.ttf);
+	font-family: abel;
+	font-weight: normal;
+}
+
+@font-face {
+	src: url(../fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+	font-family: fatface;
+	font-weight: normal;
+}
+
+.navigation {
+    background-color: #FCF7EE;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLeft {
+    padding-left: 2%;
+    padding-top: 1%;
+    background-color: #CFDBCD;
+    width: 45%;
+}
+
+.logo {
+    height: 80%;
+    
+}
+
+.navRight {
+    margin-right: 2%;
+    margin-top: 1%;
+    width: 35%;
+}
+
+.item {
+    font-family: abel;
+    color: #333;
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
